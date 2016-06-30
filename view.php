@@ -96,17 +96,7 @@ if ($course->category) {
     $navigation = '';
 }
 
-print_header(
-    "$course->shortname: $meeting->name",
-    "$course->fullname",
-    "$navigation <a href=index.php?id=$course->id>meetings</a> -> $meeting->name", 
-    "",
-    "",
-    true,
-    #update_module_button($cm->id, $course->id, get_string('modulename', 'connectproxymodule')), 
-
-    navmenu($course, $cm)
-);
+echo $OUTPUT->header();
 
 #
 # make sure user can access the remote resource:
